@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Born Again Wiki',
-  tagline: 'Dinosaurs are cool',
+  tagline: 'Born Again, the better perma death experience',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -15,8 +15,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'JTMurley', // Usually your GitHub org/user name.
+  projectName: 'born-again-wiki', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -35,17 +35,10 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          routeBasePath: '/',
         },
         blog: {
-          showReadingTime: true,
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          showReadingTime: true
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -58,21 +51,45 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'My Site',
+      title: 'Born Again Wiki',
       logo: {
-        alt: 'My Site Logo',
+        alt: 'Born Again Logo',
         src: 'img/logo.svg',
       },
       items: [
         {
           type: 'docSidebar',
-          sidebarId: 'tutorialSidebar',
+          sidebarId: 'sidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Guilds',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
-          href: 'https://github.com/facebook/docusaurus',
+          type: 'docSidebar',
+          sidebarId: 'sidebar',
+          position: 'left',
+          label: 'Players',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'sidebar',
+          position: 'left',
+          label: 'Characters',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'sidebar',
+          position: 'left',
+          label: 'Pets',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'sidebar',
+          position: 'left',
+          label: 'Trading',
+        },
+        {to: '/blog', label: 'Blog', position: 'right'},
+        {
+          href: 'https://github.com/JTMurley/Born-Again-Wiki',
           label: 'GitHub',
           position: 'right',
         },
@@ -82,28 +99,44 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Getting Started',
           items: [
-            {
-              label: 'Tutorial',
-              to: '/docs/intro',
-            },
+            // {
+            //   label: 'Getting Started',
+            //   to: '/docs/getting_started',
+            // },
+            // {
+            //   label: 'Classes',
+            //   to: '/docs/getting_started',
+            // },
+            // {
+            //   label: 'Items',
+            //   to: '/docs/getting_started',
+            // },
+            // {
+            //   label: 'Bosses',
+            //   to: '/docs/getting_started',
+            // },
           ],
         },
         {
           title: 'Community',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
-            },
-            {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discord.gg/bornagain',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              label: 'Steam',
+              href: 'https://store.steampowered.com/app/2332210/Born_Again/',
+            },
+            {
+              label: 'Google Play',
+              href: 'https://play.google.com/store/apps/details?id=co.unnamedstudios.bornagain',
+            },
+            {
+              label: 'Apple App Store',
+              href: 'https://apps.apple.com/us/app/born-again-online/id1629507405',
             },
           ],
         },
@@ -115,13 +148,21 @@ const config: Config = {
               to: '/blog',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Help Contribute',
+              href: 'https://github.com/JTMurley/Born-Again-Wiki',
+            },
+            {
+              label: 'Getting Involved',
+              href: 'https://github.com/JTMurley/Born-Again-Wiki',
+            },
+            {
+              label: 'Support',
+              href: 'https://github.com/JTMurley/Born-Again-Wiki',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} JTMurley`,
     },
     prism: {
       theme: prismThemes.github,

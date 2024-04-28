@@ -2,18 +2,33 @@ backend:
   name: github
   branch: main 
   repo: JTMurley/Born-Again-Wiki
+  commit_messages:
+    create: Create {{collection}} “{{slug}}”
+    update: Update {{collection}} “{{slug}}”
+    delete: Delete {{collection}} “{{slug}}”
+    uploadMedia: Upload “{{path}}”
+    deleteMedia: Delete “{{path}}”
+    openAuthoring: '{{message}}'
 
 # These lines should *not* be indented
-media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
+media_folder: "classic/static/img" # Media files will be stored in the repo under static/images/uploads
 public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+publish_mode: editorial_workflow
+site_url: https://born-again-wiki.netlify.app/
+logo_url: https://born-again-wiki.netlify.app/img/logo.svg
+locale: 'en'
+show_preview_links: true
+search: true
+
 
 collections:
 - name: blog
   label: "blog"
-  folder: blog
+  folder: classic/blog
   identifier_field: title
-  extension: md
+  extension: mdx
   widget: "list"
+  format: "frontmatter"
   create: true
   slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
   fields:
